@@ -1,0 +1,52 @@
+{ "movies":
+[
+  {
+  "filmtv_ID": 2,
+  "film_title": "Tron",
+  "year": 1982,
+  "genre": "Animation",
+  "duration": 76,
+  "country": "Canada",
+  "director": "David Detiege, Art Davis, Bill Perez",
+  "actors": "N/A",
+  "avg_vote": 5,
+  "votes": 28
+  },
+  {
+  "filmtv_ID": 3,
+  "film_title": "Bugs Bunny's Third Movie: 1001 Rabbit Tales",
+  "year": 1982,
+  "genre": "Animation",
+  "duration": 76,
+  "country": "United States",
+  "director": "David Detiege, Art Davis, Bill Perez",
+  "actors": "N/A",
+  "avg_vote": 7.7,
+  "votes": 28
+  },
+  {
+  "filmtv_ID": 4,
+  "film_title": "Indiana Jones",
+  "year": 1982,
+  "genre": "Action Adventure",
+  "duration": 76,
+  "country": "United States",
+  "director": "David Detiege, Art Davis, Bill Perez",
+  "actors": "N/A",
+  "avg_vote": 9,
+  "votes": 28
+  },
+  {
+  "filmtv_ID": 5,
+  "film_title": "Zombie",
+  "year": 1982,
+  "genre": "Horror",
+  "duration": 76,
+  "country": "Mexico",
+  "director": "David Detiege, Art Davis, Bill Perez",
+  "actors": "N/A",
+  "avg_vote": 3,
+  "votes": 28
+  }
+]
+}
