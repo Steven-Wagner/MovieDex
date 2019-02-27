@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "nodemon server.js",
     "start": "node server.js",
-    "test": "mocha"
+    "test": "mocha",
+    "predeploy": "npm audit",
+    "deploy": "git push heroku master"
   },
   "engines": {
     "node": "11.7.0"
