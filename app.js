@@ -9,6 +9,8 @@ const app = express();
 
 app.use(helmet());
 app.use(cors());
+
+const morganSettings = process.env.NODE_ENV === 'production' ? 'tiny' : 'dev';
 app.use(morgan('dev'));
 
 app.use(validateKey);
@@ -52,5 +54,16 @@ function handleGetMovie(req, res) {
 }
 
 app.get('/movie', handleGetMovie)
+
+app.use((error, req, res) => {
+    let response;
+    if(process.env.NODE_ENV === 'production') {
+        response = { error: {message: 'server error'}}
+    }
+    else {
+        response = {error}
+    }
+    res.status(500).json(response);
+})
 
 module.exports = app;

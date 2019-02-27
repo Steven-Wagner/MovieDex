@@ -8,6 +8,9 @@
     "start": "node server.js",
     "test": "mocha"
   },
+  "engines": {
+    "node": "11.7.0"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
