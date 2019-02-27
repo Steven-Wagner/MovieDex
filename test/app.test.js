@@ -1,3 +1,4 @@
+require('dotenv').config();
 const expect = require('chai').expect;
 const request = require('supertest');
 const app = require('../app');
@@ -7,7 +8,7 @@ describe('app', () => {
         return request(app)
             .get('/movie')
             .expect(200)
-            .set('Authorization', 'Bearer a06c558e-3a21-11e9-b210-d663bd873d93')
+            .set('Authorization', `Bearer ${process.env.API_TOKEN}`)
             .then(res => {
                 expect(res.body).to.be.an('array')
             })
@@ -26,7 +27,7 @@ describe('app', () => {
             .get('/movie')
             .query({title: 'Bugs'})
             .expect(200)
-            .set('Authorization', 'Bearer a06c558e-3a21-11e9-b210-d663bd873d93')
+            .set('Authorization', `Bearer ${process.env.API_TOKEN}`)
             .then(res => {
                 let i = 0;
                 let titlesCorrect = true;
@@ -45,7 +46,7 @@ describe('app', () => {
             .get('/movie')
             .query({avg_vote: '5'})
             .expect(200)
-            .set('Authorization', 'Bearer a06c558e-3a21-11e9-b210-d663bd873d93')
+            .set('Authorization', `Bearer ${process.env.API_TOKEN}`)
             .then(res => {
                 let i = 0;
                 let titlesCorrect = true;
@@ -64,7 +65,7 @@ describe('app', () => {
             .get('/movie')
             .query({country: 'United States'})
             .expect(200)
-            .set('Authorization', 'Bearer a06c558e-3a21-11e9-b210-d663bd873d93')
+            .set('Authorization', `Bearer ${process.env.API_TOKEN}`)
             .then(res => {
                 let i = 0;
                 let titlesCorrect = true;
@@ -83,7 +84,7 @@ describe('app', () => {
             .get('/movie')
             .query({country: 'United'})
             .expect(200)
-            .set('Authorization', 'Bearer a06c558e-3a21-11e9-b210-d663bd873d93')
+            .set('Authorization', `Bearer ${process.env.API_TOKEN}`)
             .then(res => {
                 expect(res.body).to.be.an('array').to.have.length(0);
             })
